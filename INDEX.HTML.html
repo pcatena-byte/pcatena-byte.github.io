@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Boceto / Wireframe Interactivo</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Barra de herramientas superior -->
+  <header class="toolbar">
+    <div class="toolbar-title">
+      <h2>Estructura de Wireframe Web</h2>
+      <p>Selecciona un dispositivo o haz clic en las secciones para inspeccionar</p>
+    </div>
+    <div class="toolbar-controls">
+      <button id="btn-desktop" class="active">💻 Escritorio (Desktop)</button>
+      <button id="btn-mobile">📱 Móvil (Mobile)</button>
+      <button id="btn-grid">📐 Mostrar Grilla</button>
+    </div>
+  </header>
+
+  <!-- Contenedor principal con panel de detalles y canvas -->
+  <main class="main-container">
+    
+    <!-- Area del Wireframe (Simulador de pantalla) -->
+    <div class="viewport-wrapper">
+      <div id="viewport" class="viewport desktop show-grid">
+        
+        <!-- HEADER -->
+        <section class="wf-section active" data-section="header">
+          <div class="wf-badge">Header / Navbar</div>
+          <div class="wf-header-content">
+            <div class="wf-box logo">[ LOGO ]</div>
+            <div class="wf-nav">
+              <div class="wf-box nav-item">Inicio</div>
+              <div class="wf-box nav-item">Servicios</div>
+              <div class="wf-box nav-item">Precios</div>
+              <div class="wf-box nav-item">Contacto</div>
+            </div>
+            <div class="wf-box cta-btn">[ CTA ]</div>
+          </div>
+        </section>
+
+        <!-- HERO SECTION -->
+        <section class="wf-section" data-section="hero">
+          <div class="wf-badge">Hero Section</div>
+          <div class="wf-hero-content">
+            <div class="wf-hero-text">
+              <div class="wf-box h1-placeholder">TITULAR PRINCIPAL (H1)</div>
+              <div class="wf-box p-placeholder">Subtítulo descriptivo de la propuesta de valor del producto o servicio.</div>
+              <div class="wf-hero-actions">
+                <div class="wf-box btn-primary">[ Botón Principal ]</div>
+                <div class="wf-box btn-secondary">[ Ver Demo ]</div>
+              </div>
+            </div>
+            <div class="wf-box hero-media">
+              <span>📷 [ Imagen / Mockup Principal ]</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- FEATURES SECTION -->
+        <section class="wf-section" data-section="features">
+          <div class="wf-badge">Features / Características</div>
+          <div class="wf-section-header">
+            <div class="wf-box title-ph">Título de Características</div>
+            <div class="wf-box sub-ph">Breve introducción a los servicios/funciones</div>
+          </div>
+          <div class="wf-grid-3">
+            <div class="wf-box feature-card">
+              <div class="icon-ph">⚡</div>
+              <div class="card-title">Función 1</div>
+              <div class="card-desc">Descripción corta de la característica.</div>
+            </div>
+            <div class="wf-box feature-card">
+              <div class="icon-ph">🛡️</div>
+              <div class="card-title">Función 2</div>
+              <div class="card-desc">Descripción corta de la característica.</div>
+            </div>
+            <div class="wf-box feature-card">
+              <div class="icon-ph">🚀</div>
+              <div class="card-title">Función 3</div>
+              <div class="card-desc">Descripción corta de la característica.</div>
+            </div>
+          </div>
+        </section>
+
+        <!-- TESTIMONIALS SECTION -->
+        <section class="wf-section" data-section="testimonials">
+          <div class="wf-badge">Prueba Social / Testimonios</div>
+          <div class="wf-grid-2">
+            <div class="wf-box testimonial-card">
+              <div class="avatar-ph">👤</div>
+              <div class="card-desc">"Comentario o reseña breve del cliente sobre la experiencia con la plataforma."</div>
+              <div class="author-ph">— Cliente A, Empresa</div>
+            </div>
+            <div class="wf-box testimonial-card">
+              <div class="avatar-ph">👤</div>
+              <div class="card-desc">"Excelente herramienta, mejoró nuestra productividad en poco tiempo."</div>
+              <div class="author-ph">— Cliente B, Startup</div>
+            </div>
+          </div>
+        </section>
+
+        <!-- FOOTER -->
+        <section class="wf-section" data-section="footer">
+          <div class="wf-badge">Footer / Pie de página</div>
+          <div class="wf-footer-content">
+            <div class="wf-box logo">[ LOGO ]</div>
+            <div class="wf-footer-links">
+              <span>Privacidad</span>
+              <span>Términos</span>
+              <span>Soporte</span>
+            </div>
+            <div class="wf-box copyright">© 2026 Todos los derechos reservados</div>
+          </div>
+        </section>
+
+      </div>
+    </div>
+
+    <!-- Panel Lateral de Inspección -->
+    <aside class="inspector-panel">
+      <h3>🔍 Inspección del Componente</h3>
+      <div id="inspector-content">
+        <h4 id="inspect-title">Header / Navbar</h4>
+        <p id="inspect-desc">Encabezado principal con el logotipo, menú de navegación básico y botón de llamada a la acción.</p>
+
+        <h5>Elementos Clave:</h5>
+        <ul id="inspect-list">
+          <li>Logo corporativo (izquierda)</li>
+          <li>Menú de enlaces rápidos</li>
+          <li>Botón CTA (ej. Registrarse / Login)</li>
+        </ul>
+
+        <h5>Comportamiento Móvil:</h5>
+        <p id="inspect-mobile-note">En pantallas pequeñas, el menú de navegación se oculta dentro de un menú hamburguesa (🍔).</p>
+      </div>
+    </aside>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
